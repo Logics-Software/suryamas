@@ -1,0 +1,4 @@
+config.php
+/upload/config/Database.php
+*.sql
+backup/
