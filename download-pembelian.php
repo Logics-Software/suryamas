@@ -15,7 +15,7 @@ $pdf=new FPDF('P','mm','A4');
 $pdf->AddPage();
  
 $pdf->SetFont('Times','B',12);
-$pdf->Cell(200,0,'PT. SURYAMAS INTI ARMINDO',0,1,'C');
+$pdf->Cell(200,0,'CV. INDOPRIMA MEDIKA',0,1,'C');
 $pdf->Cell(200,10,'DAFTAR TAGIHAN HUTANG',0,0,'C');
  
 $pdf->Cell(10,15,'',0,1);

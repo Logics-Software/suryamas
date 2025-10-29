@@ -1,5 +1,5 @@
 <?php
-    if(isset($_SESSION['indoprima-login'])){
+    if(isset($_SESSION['suryamas-login'])){
 	?>
         <div class="container">
             <div class="row">
@@ -13,7 +13,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <img src="layout/suryamas.png" alt="Indoprima Online" height="50" style="margin-right:10px; float:left"/>
+                                <img src="layout/suryamas.png" alt="suryamas Online" height="50" style="margin-right:10px; float:left"/>
                                 <a class="navbar-brand" href=""><strong>Online</strong></a>
                             </div>
                             <div id="navbar" class="collapse navbar-collapse">
@@ -21,13 +21,14 @@
                                     <?php
                                     if ($_SESSION['privilege']!='0'){
                                         ?>
-                                        <li class="dropdown">
+                                        <li><a href="index.php?page=daftar-harga-jual">Daftar Stok dan Harga Barang</a></li>
+                                        <!-- <li class="dropdown">
                                                 <a href="#" data-toggle="dropdown">Stok & Harga <span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="index.php?page=daftar-harga-jual">Daftar Stok dan Harga Barang</a></li>
                                                     <li><a href="index.php?page=daftar-harga-batch">Daftar Stok dan Harga per Batch</a></li> 
                                                 </ul>
-                                        </li>
+                                        </li> -->
                                         <?php
                                     } else {
                                         ?>
@@ -38,7 +39,7 @@
                                     <?php
                                     if ($_SESSION['privilege']!='0'){
                                         ?>
-                                        <li class="dropdown">
+                                        <!-- <li class="dropdown">
                                             <a href="#" data-toggle="dropdown">Tagihan & Rekap <span class="caret"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="index.php?page=daftar-piutang">Tagihan Penjualan (Piutang)</a></li>
@@ -46,21 +47,21 @@
                                                 <li><a href="index.php?page=rekap-penjualan">Daftar Transaksi Penjualan</a></li>
                                                 <li><a href="index.php?page=rekap-pembelian">Daftar Transaksi Pembelian</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <?php
                                     } else {
                                         ?>
-                                        <li class="dropdown">
+                                        <!-- <li class="dropdown">
                                             <a href="#" data-toggle="dropdown">Tagihan & Rekap <span class="caret"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="index.php?page=daftar-piutang">Tagihan Penjualan (Piutang)</a></li>
                                                 <li><a href="index.php?page=rekap-penjualan">Daftar Transaksi Penjualan</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <?php
                                     }
                                     ?>
-                                        <li class="dropdown">
+                                        <!-- <li class="dropdown">
                                             <a href="#" data-toggle="dropdown">Omset<span class="caret"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="index.php?page=omset-penjualan">Omset Sales</a></li>
@@ -73,7 +74,7 @@
                                                 <li><a href="index.php?page=customer-aktif">Daftar Customer Non Aktif</a></li>
                                                 <li><a href="index.php?page=rekap-customer-aktif">Rekap Penjualan Customer Non Aktif</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                     <?php
                                     if ($_SESSION['privilege']=='3'){
                                         ?>

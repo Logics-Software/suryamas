@@ -16,7 +16,7 @@ date_default_timezone_set('Asia/Jakarta');
 <?php
 if(!isset($_SESSION['suryamas-login'])){
 	?>
-	<title>SURYAMAS - Login</title>
+	<title>PRIMA MEDITAMA - Login</title>
 	<?php
 }else{
 	if ($_SESSION['privilege']=='0'){
