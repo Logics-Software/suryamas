@@ -1,7 +1,7 @@
 <?php
 
 include_once '../../config/Database.php';
-include_once '../../models/Detaildistribusi.php';
+include_once '../../models/DetailDistribusi.php';
 
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');

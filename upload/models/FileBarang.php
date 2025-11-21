@@ -180,7 +180,7 @@
 
   // get Barang
   public function getbarang() {
-    $query = "SELECT * FROM " . $this->table . " WHERE status = 0";
+    $query = "SELECT * FROM " . $this->table . " WHERE status = 0 LIMIT 100";
     $stmt = $this->conn->prepare($query);
     $stmt->execute();
 
