@@ -1,4 +1,4 @@
-new FileCustomerApoteker$filecustomerapoteker<?php
+<?php
 
 include_once '../../config/Database.php';
 include_once '../../models/FileCustomerApoteker.php';
