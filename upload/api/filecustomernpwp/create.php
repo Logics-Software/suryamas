@@ -23,13 +23,13 @@
 
   if (!is_array($data)) {
     //delete data
-    $filecustomernpwp->kodecustomer = $data->kodecustomer;
+    $filecustomernpwp->kodecustomer = isset($data->kodecustomer) ? urldecode($data->kodecustomer) : null;
     $filecustomernpwp->delete();
 
     //insert data
-    $filecustomernpwp->kodecustomer = $data->kodecustomer;
-    $filecustomernpwp->npwp = $data->npwp;
-    $filecustomernpwp->jeniswp = $data->jeniswp;
+    $filecustomernpwp->kodecustomer = isset($data->kodecustomer) ? urldecode($data->kodecustomer) : null;
+    $filecustomernpwp->npwp = isset($data->npwp) ? urldecode($data->npwp) : null;
+    $filecustomernpwp->jeniswp = isset($data->jeniswp) ? urldecode($data->jeniswp) : null;
     if ($filecustomernpwp->create()) {
         $success++;
     } else {
@@ -44,13 +44,13 @@
   } else {
     foreach ($data as $item) {
         //delete data
-        $filecustomernpwp->kodecustomer = $item->kodecustomer;
+        $filecustomernpwp->kodecustomer = isset($item->kodecustomer) ? urldecode($item->kodecustomer) : null;
         $filecustomernpwp->delete();
 
         //insert data
-        $filecustomernpwp->kodecustomer = $item->kodecustomer;
-        $filecustomernpwp->npwp = $item->npwp;
-        $filecustomernpwp->jeniswp = $item->jeniswp;
+        $filecustomernpwp->kodecustomer = isset($item->kodecustomer) ? urldecode($item->kodecustomer) : null;
+        $filecustomernpwp->npwp = isset($item->npwp) ? urldecode($item->npwp) : null;
+        $filecustomernpwp->jeniswp = isset($item->jeniswp) ? urldecode($item->jeniswp) : null;
         if ($filecustomernpwp->create()) {
             $success++;
         } else {

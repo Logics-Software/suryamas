@@ -23,19 +23,19 @@
 
   if (!is_array($data)) {
     //delete data
-    $filecustomerapoteker->kodecustomer = $data->kodecustomer;
+    $filecustomerapoteker->kodecustomer = isset($data->kodecustomer) ? urldecode($data->kodecustomer) : null;
     $filecustomerapoteker->delete();
 
     //insert data
-    $filecustomerapoteker->kodecustomer = $data->kodecustomer;
-    $filecustomerapoteker->namaapoteker = $data->namaapoteker;
-    $filecustomerapoteker->alamatapoteker = $data->alamatapoteker;
-    $filecustomerapoteker->noijin = $data->noijin;
-    $filecustomerapoteker->tanggaled = $data->tanggaled;
-    $filecustomerapoteker->noijinusaha = $data->noijinusaha;
-    $filecustomerapoteker->tgledijinusaha = $data->tgledijinusaha;
-    $filecustomerapoteker->nocdob = $data->nocdob;
-    $filecustomerapoteker->tanggalcdob = $data->tanggalcdob;
+    $filecustomerapoteker->kodecustomer = isset($data->kodecustomer) ? urldecode($data->kodecustomer) : null;
+    $filecustomerapoteker->namaapoteker = isset($data->namaapoteker) ? urldecode($data->namaapoteker) : null;
+    $filecustomerapoteker->alamatapoteker = isset($data->alamatapoteker) ? urldecode($data->alamatapoteker) : null;
+    $filecustomerapoteker->noijin = isset($data->noijin) ? urldecode($data->noijin) : null;
+    $filecustomerapoteker->tanggaled = isset($data->tanggaled) ? urldecode($data->tanggaled) : null;
+    $filecustomerapoteker->noijinusaha = isset($data->noijinusaha) ? urldecode($data->noijinusaha) : null;
+    $filecustomerapoteker->tgledijinusaha = isset($data->tgledijinusaha) ? urldecode($data->tgledijinusaha) : null;
+    $filecustomerapoteker->nocdob = isset($data->nocdob) ? urldecode($data->nocdob) : null;
+    $filecustomerapoteker->tanggalcdob = isset($data->tanggalcdob) ? urldecode($data->tanggalcdob) : null;
     if ($filecustomerapoteker->create()) {
         $success++;
     } else {
@@ -50,19 +50,19 @@
   } else {
     foreach ($data as $item) {
         //delete data
-        $filecustomerapoteker->kodecustomer = $item->kodecustomer;
+        $filecustomerapoteker->kodecustomer = isset($item->kodecustomer) ? urldecode($item->kodecustomer) : null;
         $filecustomerapoteker->delete();
 
         //insert data
-        $filecustomerapoteker->kodecustomer = $item->kodecustomer;
-        $filecustomerapoteker->namaapoteker = $item->namaapoteker;
-        $filecustomerapoteker->alamatapoteker = $item->alamatapoteker;
-        $filecustomerapoteker->noijin = $item->noijin;
-        $filecustomerapoteker->tanggaled = $item->tanggaled;
-        $filecustomerapoteker->noijinusaha = $item->noijinusaha;
-        $filecustomerapoteker->tgledijinusaha = $item->tgledijinusaha;
-        $filecustomerapoteker->nocdob = $item->nocdob;
-        $filecustomerapoteker->tanggalcdob = $item->tanggalcdob;
+        $filecustomerapoteker->kodecustomer = isset($item->kodecustomer) ? urldecode($item->kodecustomer) : null;
+        $filecustomerapoteker->namaapoteker = isset($item->namaapoteker) ? urldecode($item->namaapoteker) : null;
+        $filecustomerapoteker->alamatapoteker = isset($item->alamatapoteker) ? urldecode($item->alamatapoteker) : null;
+        $filecustomerapoteker->noijin = isset($item->noijin) ? urldecode($item->noijin) : null;
+        $filecustomerapoteker->tanggaled = isset($item->tanggaled) ? urldecode($item->tanggaled) : null;
+        $filecustomerapoteker->noijinusaha = isset($item->noijinusaha) ? urldecode($item->noijinusaha) : null;
+        $filecustomerapoteker->tgledijinusaha = isset($item->tgledijinusaha) ? urldecode($item->tgledijinusaha) : null;
+        $filecustomerapoteker->nocdob = isset($item->nocdob) ? urldecode($item->nocdob) : null;
+        $filecustomerapoteker->tanggalcdob = isset($item->tanggalcdob) ? urldecode($item->tanggalcdob) : null;
         if ($filecustomerapoteker->create()) {
             $success++;
         } else {

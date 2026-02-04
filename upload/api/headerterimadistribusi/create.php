@@ -22,19 +22,19 @@
     $fail = 0;
     if (!is_array($data)) {
         //delete data
-        $headerterimadistribusi->nopenerimaan = $data->nopenerimaan;
+        $headerterimadistribusi->nopenerimaan = isset($data->nopenerimaan) ? urldecode($data->nopenerimaan) : null;
         $headerterimadistribusi->delete();
 
         //insert data
-        $headerterimadistribusi->nopenerimaan = $data->nopenerimaan;
-        $headerterimadistribusi->tanggalpenerimaan = $data->tanggalpenerimaan;
-        $headerterimadistribusi->nodistribusi = $data->nodistribusi;
-        $headerterimadistribusi->keterangan = $data->keterangan;
-        $headerterimadistribusi->kodegudang = $data->kodegudang;
-        $headerterimadistribusi->kodekirim= $data->kodekirim;
-        $headerterimadistribusi->nilaipenerimaan = $data->nilaipenerimaan;
-        $headerterimadistribusi->userid = $data->userid;
-        $headerterimadistribusi->status = $data->status;
+        $headerterimadistribusi->nopenerimaan = isset($data->nopenerimaan) ? urldecode($data->nopenerimaan) : null;
+        $headerterimadistribusi->tanggalpenerimaan = isset($data->tanggalpenerimaan) ? urldecode($data->tanggalpenerimaan) : null;
+        $headerterimadistribusi->nodistribusi = isset($data->nodistribusi) ? urldecode($data->nodistribusi) : null;
+        $headerterimadistribusi->keterangan = isset($data->keterangan) ? urldecode($data->keterangan) : null;
+        $headerterimadistribusi->kodegudang = isset($data->kodegudang) ? urldecode($data->kodegudang) : null;
+        $headerterimadistribusi->kodekirim= isset($data->kodekirim) ? urldecode($data->kodekirim) : null;
+        $headerterimadistribusi->nilaipenerimaan = isset($data->nilaipenerimaan) ? urldecode($data->nilaipenerimaan) : null;
+        $headerterimadistribusi->userid = isset($data->userid) ? urldecode($data->userid) : null;
+        $headerterimadistribusi->status = isset($data->status) ? urldecode($data->status) : null;
         if ($headerterimadistribusi->create()) {
             $success++;
         } else {
@@ -43,19 +43,19 @@
     } else {
         foreach ($data as $item) {
             //delete data
-            $headerterimadistribusi->nopenerimaan = $item->nopenerimaan;
+            $headerterimadistribusi->nopenerimaan = isset($item->nopenerimaan) ? urldecode($item->nopenerimaan) : null;
             $headerterimadistribusi->delete();
 
             //insert data
-            $headerterimadistribusi->nopenerimaan = $item->nopenerimaan;
-            $headerterimadistribusi->tanggalpenerimaan = $item->tanggalpenerimaan;
-            $headerterimadistribusi->nodistribusi = $item->nodistribusi;
-            $headerterimadistribusi->keterangan = $item->keterangan;
-            $headerterimadistribusi->kodegudang = $item->kodegudang;
-            $headerterimadistribusi->kodekirim= $item->kodekirim;
-            $headerterimadistribusi->nilaipenerimaan = $item->nilaipenerimaan;
-            $headerterimadistribusi->userid = $item->userid;
-            $headerterimadistribusi->status = $item->status;
+            $headerterimadistribusi->nopenerimaan = isset($item->nopenerimaan) ? urldecode($item->nopenerimaan) : null;
+            $headerterimadistribusi->tanggalpenerimaan = isset($item->tanggalpenerimaan) ? urldecode($item->tanggalpenerimaan) : null;
+            $headerterimadistribusi->nodistribusi = isset($item->nodistribusi) ? urldecode($item->nodistribusi) : null;
+            $headerterimadistribusi->keterangan = isset($item->keterangan) ? urldecode($item->keterangan) : null;
+            $headerterimadistribusi->kodegudang = isset($item->kodegudang) ? urldecode($item->kodegudang) : null;
+            $headerterimadistribusi->kodekirim= isset($item->kodekirim) ? urldecode($item->kodekirim) : null;
+            $headerterimadistribusi->nilaipenerimaan = isset($item->nilaipenerimaan) ? urldecode($item->nilaipenerimaan) : null;
+            $headerterimadistribusi->userid = isset($item->userid) ? urldecode($item->userid) : null;
+            $headerterimadistribusi->status = isset($item->status) ? urldecode($item->status) : null;
             if ($headerterimadistribusi->create()) {
                 $success++;
             } else {

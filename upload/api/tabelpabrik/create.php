@@ -22,15 +22,15 @@ $success = 0;
 $fail = 0;
 if (!is_array($data)) {
     //delete data
-    $tabelpabrik->kodepabrik = $data->kodepabrik;
+    $tabelpabrik->kodepabrik = isset($data->kodepabrik) ? urldecode($data->kodepabrik) : null;
     $tabelpabrik->delete();
 
     //insert data
-    $tabelpabrik->kodepabrik = $data->kodepabrik;
-    $tabelpabrik->namapabrik = $data->namapabrik;
-    $tabelpabrik->inisialkodebarang = $data->inisialkodebarang;
-    $tabelpabrik->status = $data->status;
-    $tabelpabrik->kodeif = $data->kodeif;
+    $tabelpabrik->kodepabrik = isset($data->kodepabrik) ? urldecode($data->kodepabrik) : null;
+    $tabelpabrik->namapabrik = isset($data->namapabrik) ? urldecode($data->namapabrik) : null;
+    $tabelpabrik->inisialkodebarang = isset($data->inisialkodebarang) ? urldecode($data->inisialkodebarang) : null;
+    $tabelpabrik->status = isset($data->status) ? urldecode($data->status) : null;
+    $tabelpabrik->kodeif = isset($data->kodeif) ? urldecode($data->kodeif) : null;
     if ($tabelpabrik->create()) {
         $success++;
     } else {
@@ -39,15 +39,15 @@ if (!is_array($data)) {
 } else {
     foreach ($data as $item) {
         //delete data
-        $tabelpabrik->kodepabrik = $item->kodepabrik;
+        $tabelpabrik->kodepabrik = isset($item->kodepabrik) ? urldecode($item->kodepabrik) : null;
         $tabelpabrik->delete();
 
         //insert data
-        $tabelpabrik->kodepabrik = $item->kodepabrik;
-        $tabelpabrik->namapabrik = $item->namapabrik;
-        $tabelpabrik->inisialkodebarang = $item->inisialkodebarang;
-        $tabelpabrik->status = $item->status;
-        $tabelpabrik->kodeif = $item->kodeif;
+        $tabelpabrik->kodepabrik = isset($item->kodepabrik) ? urldecode($item->kodepabrik) : null;
+        $tabelpabrik->namapabrik = isset($item->namapabrik) ? urldecode($item->namapabrik) : null;
+        $tabelpabrik->inisialkodebarang = isset($item->inisialkodebarang) ? urldecode($item->inisialkodebarang) : null;
+        $tabelpabrik->status = isset($item->status) ? urldecode($item->status) : null;
+        $tabelpabrik->kodeif = isset($item->kodeif) ? urldecode($item->kodeif) : null;
         if ($tabelpabrik->create()) {
             $success++;
         } else {

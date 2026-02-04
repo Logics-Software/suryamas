@@ -22,27 +22,27 @@
     $fail = 0;
     if (!is_array($data)) {
         //delete data
-        $headerpenjualan->nopenjualan = $data->nopenjualan;
+        $headerpenjualan->nopenjualan = isset($data->nopenjualan) ? urldecode($data->nopenjualan) : null;
         $headerpenjualan->delete();
 
         //insert data
-        $headerpenjualan->kodeformulir = $data->kodeformulir;
-        $headerpenjualan->nopenjualan = $data->nopenjualan;
-        $headerpenjualan->tanggalpenjualan = $data->tanggalpenjualan;
-        $headerpenjualan->kodetermin = $data->kodetermin;
-        $headerpenjualan->tanggaljatuhtempo = $data->tanggaljatuhtempo;
-        $headerpenjualan->nopo = $data->nopo;
-        $headerpenjualan->keterangan = $data->keterangan;
-        $headerpenjualan->kodecustomer = $data->kodecustomer;
-        $headerpenjualan->kodesalesman= $data->kodesalesman;
-        $headerpenjualan->kodepengirim = $data->kodepengirim;
-        $headerpenjualan->dpp = $data->dpp;
-        $headerpenjualan->ppn = $data->ppn;
-        $headerpenjualan->nilaipenjualan = $data->nilaipenjualan;
-        $headerpenjualan->saldopenjualan = $data->saldopenjualan;
-        $headerpenjualan->cnpenjualan = $data->cnpenjualan;
-        $headerpenjualan->userid = $data->userid;
-        $headerpenjualan->status = $data->status;
+        $headerpenjualan->kodeformulir = isset($data->kodeformulir) ? urldecode($data->kodeformulir) : null;
+        $headerpenjualan->nopenjualan = isset($data->nopenjualan) ? urldecode($data->nopenjualan) : null;
+        $headerpenjualan->tanggalpenjualan = isset($data->tanggalpenjualan) ? urldecode($data->tanggalpenjualan) : null;
+        $headerpenjualan->kodetermin = isset($data->kodetermin) ? urldecode($data->kodetermin) : null;
+        $headerpenjualan->tanggaljatuhtempo = isset($data->tanggaljatuhtempo) ? urldecode($data->tanggaljatuhtempo) : null;
+        $headerpenjualan->nopo = isset($data->nopo) ? urldecode($data->nopo) : null;
+        $headerpenjualan->keterangan = isset($data->keterangan) ? urldecode($data->keterangan) : null;
+        $headerpenjualan->kodecustomer = isset($data->kodecustomer) ? urldecode($data->kodecustomer) : null;
+        $headerpenjualan->kodesalesman= isset($data->kodesalesman) ? urldecode($data->kodesalesman) : null;
+        $headerpenjualan->kodepengirim = isset($data->kodepengirim) ? urldecode($data->kodepengirim) : null;
+        $headerpenjualan->dpp = isset($data->dpp) ? urldecode($data->dpp) : null;
+        $headerpenjualan->ppn = isset($data->ppn) ? urldecode($data->ppn) : null;
+        $headerpenjualan->nilaipenjualan = isset($data->nilaipenjualan) ? urldecode($data->nilaipenjualan) : null;
+        $headerpenjualan->saldopenjualan = isset($data->saldopenjualan) ? urldecode($data->saldopenjualan) : null;
+        $headerpenjualan->cnpenjualan = isset($data->cnpenjualan) ? urldecode($data->cnpenjualan) : null;
+        $headerpenjualan->userid = isset($data->userid) ? urldecode($data->userid) : null;
+        $headerpenjualan->status = isset($data->status) ? urldecode($data->status) : null;
         if ($headerpenjualan->create()) {
             $success++;
         } else {
@@ -51,27 +51,27 @@
     } else {
         foreach ($data as $item) {
             //delete data
-            $headerpenjualan->nopenjualan = $item->nopenjualan;
+            $headerpenjualan->nopenjualan = isset($item->nopenjualan) ? urldecode($item->nopenjualan) : null;
             $headerpenjualan->delete();
 
             //insert data
-            $headerpenjualan->kodeformulir = $item->kodeformulir;
-            $headerpenjualan->nopenjualan = $item->nopenjualan;
-            $headerpenjualan->tanggalpenjualan = $item->tanggalpenjualan;
-            $headerpenjualan->kodetermin = $item->kodetermin;
-            $headerpenjualan->tanggaljatuhtempo = $item->tanggaljatuhtempo;
-            $headerpenjualan->nopo = $item->nopo;
-            $headerpenjualan->keterangan = $item->keterangan;
-            $headerpenjualan->kodecustomer = $item->kodecustomer;
-            $headerpenjualan->kodesalesman= $item->kodesalesman;
-            $headerpenjualan->kodepengirim = $item->kodepengirim;
-            $headerpenjualan->dpp = $item->dpp;
-            $headerpenjualan->ppn = $item->ppn;
-            $headerpenjualan->nilaipenjualan = $item->nilaipenjualan;
-            $headerpenjualan->saldopenjualan = $item->saldopenjualan;
-            $headerpenjualan->cnpenjualan = $item->cnpenjualan;
-            $headerpenjualan->userid = $item->userid;
-            $headerpenjualan->status = $item->status;
+            $headerpenjualan->kodeformulir = isset($item->kodeformulir) ? urldecode($item->kodeformulir) : null;
+            $headerpenjualan->nopenjualan = isset($item->nopenjualan) ? urldecode($item->nopenjualan) : null;
+            $headerpenjualan->tanggalpenjualan = isset($item->tanggalpenjualan) ? urldecode($item->tanggalpenjualan) : null;
+            $headerpenjualan->kodetermin = isset($item->kodetermin) ? urldecode($item->kodetermin) : null;
+            $headerpenjualan->tanggaljatuhtempo = isset($item->tanggaljatuhtempo) ? urldecode($item->tanggaljatuhtempo) : null;
+            $headerpenjualan->nopo = isset($item->nopo) ? urldecode($item->nopo) : null;
+            $headerpenjualan->keterangan = isset($item->keterangan) ? urldecode($item->keterangan) : null;
+            $headerpenjualan->kodecustomer = isset($item->kodecustomer) ? urldecode($item->kodecustomer) : null;
+            $headerpenjualan->kodesalesman= isset($item->kodesalesman) ? urldecode($item->kodesalesman) : null;
+            $headerpenjualan->kodepengirim = isset($item->kodepengirim) ? urldecode($item->kodepengirim) : null;
+            $headerpenjualan->dpp = isset($item->dpp) ? urldecode($item->dpp) : null;
+            $headerpenjualan->ppn = isset($item->ppn) ? urldecode($item->ppn) : null;
+            $headerpenjualan->nilaipenjualan = isset($item->nilaipenjualan) ? urldecode($item->nilaipenjualan) : null;
+            $headerpenjualan->saldopenjualan = isset($item->saldopenjualan) ? urldecode($item->saldopenjualan) : null;
+            $headerpenjualan->cnpenjualan = isset($item->cnpenjualan) ? urldecode($item->cnpenjualan) : null;
+            $headerpenjualan->userid = isset($item->userid) ? urldecode($item->userid) : null;
+            $headerpenjualan->status = isset($item->status) ? urldecode($item->status) : null;
             if ($headerpenjualan->create()) {
                 $success++;
             } else {

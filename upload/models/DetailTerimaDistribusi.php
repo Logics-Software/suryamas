@@ -32,15 +32,15 @@ class DetailTerimaDistribusi {
   $stmt = $this->conn->prepare($query);
   
   // Clean data
-  $this->nopenerimaan = htmlspecialchars(strip_tags($this->nopenerimaan));
-  $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
-  $this->nopembelian = htmlspecialchars(strip_tags($this->nopembelian));
-  $this->nomorbatch = htmlspecialchars(strip_tags($this->nomorbatch));
-  $this->expireddate = htmlspecialchars(strip_tags($this->expireddate));
-  $this->jumlah = htmlspecialchars(strip_tags($this->jumlah));
-  $this->hpp = htmlspecialchars(strip_tags($this->hpp));
-  $this->totalharga = htmlspecialchars(strip_tags($this->totalharga));
-  $this->nourut = htmlspecialchars(strip_tags($this->nourut));
+  $this->nopenerimaan = strip_tags($this->nopenerimaan);
+  $this->kodebarang = strip_tags($this->kodebarang);
+  $this->nopembelian = strip_tags($this->nopembelian);
+  $this->nomorbatch = strip_tags($this->nomorbatch);
+  $this->expireddate = strip_tags($this->expireddate);
+  $this->jumlah = strip_tags($this->jumlah);
+  $this->hpp = strip_tags($this->hpp);
+  $this->totalharga = strip_tags($this->totalharga);
+  $this->nourut = strip_tags($this->nourut);
 
   // Bind data
   $stmt->bindParam(':nopenerimaan', $this->nopenerimaan);
@@ -73,7 +73,7 @@ class DetailTerimaDistribusi {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nopenerimaan = htmlspecialchars(strip_tags($this->nopenerimaan));
+    $this->nopenerimaan = strip_tags($this->nopenerimaan);
     
     // Bind data
     $stmt->bindParam(':nopenerimaan', $this->nopenerimaan);

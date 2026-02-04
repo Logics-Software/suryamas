@@ -25,9 +25,9 @@
   $stmt = $this->conn->prepare($query);
 
   // Clean data
-  $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
-  $this->npwp = htmlspecialchars(strip_tags($this->npwp));
-  $this->jeniswp = htmlspecialchars(strip_tags($this->jeniswp));
+  $this->kodecustomer = strip_tags($this->kodecustomer);
+  $this->npwp = strip_tags($this->npwp);
+  $this->jeniswp = strip_tags($this->jeniswp);
 
   // Bind data
   $stmt->bindParam(':kodecustomer', $this->kodecustomer);
@@ -54,7 +54,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
+    $this->kodecustomer = strip_tags($this->kodecustomer);
     
     // Bind data
     $stmt->bindParam(':kodecustomer', $this->kodecustomer);
@@ -79,7 +79,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
+    $this->kodecustomer = strip_tags($this->kodecustomer);
     
     // Bind data
     $stmt->bindParam(':kodecustomer', $this->kodecustomer);

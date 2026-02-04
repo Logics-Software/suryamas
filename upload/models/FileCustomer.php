@@ -51,32 +51,34 @@
   // Prepare Statement
   $stmt = $this->conn->prepare($query);
 
-  // Clean data
-  $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
-  $this->kodebadanusaha = htmlspecialchars(strip_tags($this->kodebadanusaha));
-  $this->namabadanusaha = htmlspecialchars(strip_tags($this->namabadanusaha));
-  $this->namacustomer = htmlspecialchars(strip_tags($this->namacustomer));
-  $this->alamatcustomer = htmlspecialchars(strip_tags($this->alamatcustomer));
-  $this->kota = htmlspecialchars(strip_tags($this->kota));
-  $this->notelepon = htmlspecialchars(strip_tags($this->notelepon));
-  $this->nofaximili = htmlspecialchars(strip_tags($this->nofaximili));
-  $this->kontakperson = htmlspecialchars(strip_tags($this->kontakperson));
-  $this->namawp = htmlspecialchars(strip_tags($this->namawp));
-  $this->alamatwp = htmlspecialchars(strip_tags($this->alamatwp));
-  $this->npwp = htmlspecialchars(strip_tags($this->npwp));
-  $this->tipecustomer = htmlspecialchars(strip_tags($this->tipecustomer));
-  $this->jenisproteksi = htmlspecialchars(strip_tags($this->jenisproteksi));
-  $this->plafonkredit = htmlspecialchars(strip_tags($this->plafonkredit));
-  $this->jumlahfaktur = htmlspecialchars(strip_tags($this->jumlahfaktur));
-  $this->kodesalesman = htmlspecialchars(strip_tags($this->kodesalesman));
-  $this->kodepengirim = htmlspecialchars(strip_tags($this->kodepengirim));
-  $this->kodetermin = htmlspecialchars(strip_tags($this->kodetermin));
-  $this->kodearea = htmlspecialchars(strip_tags($this->kodearea));
-  $this->kodeformulir = htmlspecialchars(strip_tags($this->kodeformulir));
-  $this->kodebank = htmlspecialchars(strip_tags($this->kodebank));
-  $this->userid = htmlspecialchars(strip_tags($this->userid));
-  $this->status = htmlspecialchars(strip_tags($this->status));
-  $this->cabang = htmlspecialchars(strip_tags($this->cabang));
+  // Clean data - hanya strip tags untuk keamanan, tanpa htmlspecialchars
+  // htmlspecialchars tidak diperlukan karena data disimpan ke database, bukan untuk output HTML
+  // PDO prepared statement sudah aman dari SQL injection
+  $this->kodecustomer = strip_tags($this->kodecustomer);
+  $this->kodebadanusaha = strip_tags($this->kodebadanusaha);
+  $this->namabadanusaha = strip_tags($this->namabadanusaha);
+  $this->namacustomer = strip_tags($this->namacustomer);
+  $this->alamatcustomer = strip_tags($this->alamatcustomer);
+  $this->kota = strip_tags($this->kota);
+  $this->notelepon = strip_tags($this->notelepon);
+  $this->nofaximili = strip_tags($this->nofaximili);
+  $this->kontakperson = strip_tags($this->kontakperson);
+  $this->namawp = strip_tags($this->namawp);
+  $this->alamatwp = strip_tags($this->alamatwp);
+  $this->npwp = strip_tags($this->npwp);
+  $this->tipecustomer = strip_tags($this->tipecustomer);
+  $this->jenisproteksi = strip_tags($this->jenisproteksi);
+  $this->plafonkredit = strip_tags($this->plafonkredit);
+  $this->jumlahfaktur = strip_tags($this->jumlahfaktur);
+  $this->kodesalesman = strip_tags($this->kodesalesman);
+  $this->kodepengirim = strip_tags($this->kodepengirim);
+  $this->kodetermin = strip_tags($this->kodetermin);
+  $this->kodearea = strip_tags($this->kodearea);
+  $this->kodeformulir = strip_tags($this->kodeformulir);
+  $this->kodebank = strip_tags($this->kodebank);
+  $this->userid = strip_tags($this->userid);
+  $this->status = strip_tags($this->status);
+  $this->cabang = strip_tags($this->cabang);
 
   // Bind data
   $stmt->bindParam(':kodecustomer', $this->kodecustomer);
@@ -125,7 +127,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
+    $this->kodecustomer = strip_tags($this->kodecustomer);
     
     // Bind data
     $stmt->bindParam(':kodecustomer', $this->kodecustomer);
@@ -150,7 +152,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
+    $this->kodecustomer = strip_tags($this->kodecustomer);
     
     // Bind data
     $stmt->bindParam(':kodecustomer', $this->kodecustomer);

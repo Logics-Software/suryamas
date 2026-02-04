@@ -22,22 +22,22 @@
   $fail = 0;
   if (!is_array($data)) {
           //delete data
-          $stokbarang->kodegudang = $data->kodegudang;
-          $stokbarang->kodebarang = $data->kodebarang;
-          $stokbarang->nopembelian = $data->nopembelian;
-          $stokbarang->nomorbatch = $data->nomorbatch;
+          $stokbarang->kodegudang = isset($data->kodegudang) ? urldecode($data->kodegudang) : null;
+          $stokbarang->kodebarang = isset($data->kodebarang) ? urldecode($data->kodebarang) : null;
+          $stokbarang->nopembelian = isset($data->nopembelian) ? urldecode($data->nopembelian) : null;
+          $stokbarang->nomorbatch = isset($data->nomorbatch) ? urldecode($data->nomorbatch) : null;
           $stokbarang->delete();
     
           //insert data
-          $stokbarang->kodegudang = $data->kodegudang;
-          $stokbarang->kodebarang = $data->kodebarang;
-          $stokbarang->nopembelian = $data->nopembelian;
-          $stokbarang->nomorbatch = $data->nomorbatch;
-          $stokbarang->tanggalperolehan = $data->tanggalperolehan;
-          $stokbarang->expireddate = $data->expireddate;
-          $stokbarang->hpp = $data->hpp;
-          $stokbarang->stokakhir = $data->stokakhir;
-          $stokbarang->status = $data->status;
+          $stokbarang->kodegudang = isset($data->kodegudang) ? urldecode($data->kodegudang) : null;
+          $stokbarang->kodebarang = isset($data->kodebarang) ? urldecode($data->kodebarang) : null;
+          $stokbarang->nopembelian = isset($data->nopembelian) ? urldecode($data->nopembelian) : null;
+          $stokbarang->nomorbatch = isset($data->nomorbatch) ? urldecode($data->nomorbatch) : null;
+          $stokbarang->tanggalperolehan = isset($data->tanggalperolehan) ? urldecode($data->tanggalperolehan) : null;
+          $stokbarang->expireddate = isset($data->expireddate) ? urldecode($data->expireddate) : null;
+          $stokbarang->hpp = isset($data->hpp) ? urldecode($data->hpp) : null;
+          $stokbarang->stokakhir = isset($data->stokakhir) ? urldecode($data->stokakhir) : null;
+          $stokbarang->status = isset($data->status) ? urldecode($data->status) : null;
           if ($stokbarang->create()) {
               $success++;
           } else {
@@ -46,22 +46,22 @@
   } else {
       foreach ($data as $item) {
           //delete data
-          $stokbarang->kodegudang = $item->kodegudang;
-          $stokbarang->kodebarang = $item->kodebarang;
-          $stokbarang->nopembelian = $item->nopembelian;
-          $stokbarang->nomorbatch = $item->nomorbatch;
+          $stokbarang->kodegudang = isset($item->kodegudang) ? urldecode($item->kodegudang) : null;
+          $stokbarang->kodebarang = isset($item->kodebarang) ? urldecode($item->kodebarang) : null;
+          $stokbarang->nopembelian = isset($item->nopembelian) ? urldecode($item->nopembelian) : null;
+          $stokbarang->nomorbatch = isset($item->nomorbatch) ? urldecode($item->nomorbatch) : null;
           $stokbarang->delete();
     
           //insert data
-          $stokbarang->kodegudang = $item->kodegudang;
-          $stokbarang->kodebarang = $item->kodebarang;
-          $stokbarang->nopembelian = $item->nopembelian;
-          $stokbarang->nomorbatch = $item->nomorbatch;
-          $stokbarang->tanggalperolehan = $item->tanggalperolehan;
-          $stokbarang->expireddate = $item->expireddate;
-          $stokbarang->hpp = $item->hpp;
-          $stokbarang->stokakhir = $item->stokakhir;
-          $stokbarang->status = $item->status;
+          $stokbarang->kodegudang = isset($item->kodegudang) ? urldecode($item->kodegudang) : null;
+          $stokbarang->kodebarang = isset($item->kodebarang) ? urldecode($item->kodebarang) : null;
+          $stokbarang->nopembelian = isset($item->nopembelian) ? urldecode($item->nopembelian) : null;
+          $stokbarang->nomorbatch = isset($item->nomorbatch) ? urldecode($item->nomorbatch) : null;
+          $stokbarang->tanggalperolehan = isset($item->tanggalperolehan) ? urldecode($item->tanggalperolehan) : null;
+          $stokbarang->expireddate = isset($item->expireddate) ? urldecode($item->expireddate) : null;
+          $stokbarang->hpp = isset($item->hpp) ? urldecode($item->hpp) : null;
+          $stokbarang->stokakhir = isset($item->stokakhir) ? urldecode($item->stokakhir) : null;
+          $stokbarang->status = isset($item->status) ? urldecode($item->status) : null;
           if ($stokbarang->create()) {
               $success++;
           } else {

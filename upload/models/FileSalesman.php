@@ -30,13 +30,13 @@
   $stmt = $this->conn->prepare($query);
 
   // Clean data
-  $this->kodesalesman = htmlspecialchars(strip_tags($this->kodesalesman));
-  $this->namasalesman = htmlspecialchars(strip_tags($this->namasalesman));
-  $this->alamatsalesman = htmlspecialchars(strip_tags($this->alamatsalesman));
-  $this->notelepon = htmlspecialchars(strip_tags($this->notelepon));
-  $this->kodearea = htmlspecialchars(strip_tags($this->kodearea));
-  $this->userid = htmlspecialchars(strip_tags($this->userid));
-  $this->status = htmlspecialchars(strip_tags($this->status));
+  $this->kodesalesman = strip_tags($this->kodesalesman);
+  $this->namasalesman = strip_tags($this->namasalesman);
+  $this->alamatsalesman = strip_tags($this->alamatsalesman);
+  $this->notelepon = strip_tags($this->notelepon);
+  $this->kodearea = strip_tags($this->kodearea);
+  $this->userid = strip_tags($this->userid);
+  $this->status = strip_tags($this->status);
 
   // Bind data
   $stmt->bindParam(':kodesalesman', $this->kodesalesman);
@@ -67,7 +67,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodesalesman = htmlspecialchars(strip_tags($this->kodesalesman));
+    $this->kodesalesman = strip_tags($this->kodesalesman);
     
     // Bind data
     $stmt->bindParam(':kodesalesman', $this->kodesalesman);
@@ -92,7 +92,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodesalesman = htmlspecialchars(strip_tags($this->kodesalesman));
+    $this->kodesalesman = strip_tags($this->kodesalesman);
     
     // Bind data
     $stmt->bindParam(':kodesalesman', $this->kodesalesman);

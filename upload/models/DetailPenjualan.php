@@ -36,18 +36,18 @@ class DetailPenjualan {
   $stmt = $this->conn->prepare($query);
   
   // Clean data
-  $this->nopenjualan = htmlspecialchars(strip_tags($this->nopenjualan));
-  $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
-  $this->nopembelian = htmlspecialchars(strip_tags($this->nopembelian));
-  $this->nomorbatch = htmlspecialchars(strip_tags($this->nomorbatch));
-  $this->expireddate = htmlspecialchars(strip_tags($this->expireddate));
-  $this->jumlah = htmlspecialchars(strip_tags($this->jumlah));
-  $this->hargajual = htmlspecialchars(strip_tags($this->hargajual));
-  $this->discount1 = htmlspecialchars(strip_tags($this->discount1));
-  $this->discount2 = htmlspecialchars(strip_tags($this->discount2));
-  $this->cn = htmlspecialchars(strip_tags($this->cn));
-  $this->totalharga = htmlspecialchars(strip_tags($this->totalharga));
-  $this->nourut = htmlspecialchars(strip_tags($this->nourut));
+  $this->nopenjualan = strip_tags($this->nopenjualan);
+  $this->kodebarang = strip_tags($this->kodebarang);
+  $this->nopembelian = strip_tags($this->nopembelian);
+  $this->nomorbatch = strip_tags($this->nomorbatch);
+  $this->expireddate = strip_tags($this->expireddate);
+  $this->jumlah = strip_tags($this->jumlah);
+  $this->hargajual = strip_tags($this->hargajual);
+  $this->discount1 = strip_tags($this->discount1);
+  $this->discount2 = strip_tags($this->discount2);
+  $this->cn = strip_tags($this->cn);
+  $this->totalharga = strip_tags($this->totalharga);
+  $this->nourut = strip_tags($this->nourut);
 
   // Bind data
   $stmt->bindParam(':nopenjualan', $this->nopenjualan);
@@ -83,7 +83,7 @@ class DetailPenjualan {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nopenjualan = htmlspecialchars(strip_tags($this->nopenjualan));
+    $this->nopenjualan = strip_tags($this->nopenjualan);
     
     // Bind data
     $stmt->bindParam(':nopenjualan', $this->nopenjualan);
@@ -105,7 +105,7 @@ class DetailPenjualan {
     $query .= " WHERE nopenjualan = :nopenjualan ORDER BY nourut ASC";
 
     $stmt = $this->conn->prepare($query);
-    // $this->nopenjualan = htmlspecialchars(strip_tags($this->nopenjualan));
+    // $this->nopenjualan = strip_tags($this->nopenjualan));
     $stmt->bindParam(':nopenjualan', $nopenjualan);
     $stmt->execute();
 

@@ -31,14 +31,14 @@ class HeaderFakturKembali {
   $stmt = $this->conn->prepare($query);
 
   // Clean data
-  $this->kodeformulir = htmlspecialchars(strip_tags($this->kodeformulir));
-  $this->nokembali = htmlspecialchars(strip_tags($this->nokembali));
-  $this->tanggalkembali = htmlspecialchars(strip_tags($this->tanggalkembali));
-  $this->kodepengirim = htmlspecialchars(strip_tags($this->kodepengirim));
-  $this->jumlahfaktur = htmlspecialchars(strip_tags($this->jumlahfaktur));
-  $this->jumlahitem = htmlspecialchars(strip_tags($this->jumlahitem));
-  $this->status = htmlspecialchars(strip_tags($this->status));
-  $this->userid = htmlspecialchars(strip_tags($this->userid));
+  $this->kodeformulir = strip_tags($this->kodeformulir);
+  $this->nokembali = strip_tags($this->nokembali);
+  $this->tanggalkembali = strip_tags($this->tanggalkembali);
+  $this->kodepengirim = strip_tags($this->kodepengirim);
+  $this->jumlahfaktur = strip_tags($this->jumlahfaktur);
+  $this->jumlahitem = strip_tags($this->jumlahitem);
+  $this->status = strip_tags($this->status);
+  $this->userid = strip_tags($this->userid);
 
   // Bind data
   $stmt->bindParam(':kodeformulir', $this->kodeformulir);
@@ -70,7 +70,7 @@ class HeaderFakturKembali {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nokembali = htmlspecialchars(strip_tags($this->nokembali));
+    $this->nokembali = strip_tags($this->nokembali);
     
     // Bind data
     $stmt->bindParam(':nokembali', $this->nokembali);
@@ -95,7 +95,7 @@ class HeaderFakturKembali {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nokembali = htmlspecialchars(strip_tags($this->nokembali));
+    $this->nokembali = strip_tags($this->nokembali);
 
     // Bind data
     $stmt->bindParam(':nokembali', $this->nokembali);

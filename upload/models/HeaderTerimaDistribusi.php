@@ -33,14 +33,14 @@ class HeaderTerimaDistribusi {
   $stmt = $this->conn->prepare($query);
 
   // Clean data
-  $this->nopenerimaan = htmlspecialchars(strip_tags($this->nopenerimaan));
-  $this->tanggalpenerimaan = htmlspecialchars(strip_tags($this->tanggalpenerimaan));
-  $this->nodistribusi = htmlspecialchars(strip_tags($this->nodistribusi));
-  $this->keterangan = htmlspecialchars(strip_tags($this->keterangan));
-  $this->kodegudang = htmlspecialchars(strip_tags($this->kodegudang));
-  $this->kodekirim = htmlspecialchars(strip_tags($this->kodekirim));
-  $this->nilaipenerimaan = htmlspecialchars(strip_tags($this->nilaipenerimaan));
-  $this->userid = htmlspecialchars(strip_tags($this->userid));
+  $this->nopenerimaan = strip_tags($this->nopenerimaan);
+  $this->tanggalpenerimaan = strip_tags($this->tanggalpenerimaan);
+  $this->nodistribusi = strip_tags($this->nodistribusi);
+  $this->keterangan = strip_tags($this->keterangan);
+  $this->kodegudang = strip_tags($this->kodegudang);
+  $this->kodekirim = strip_tags($this->kodekirim);
+  $this->nilaipenerimaan = strip_tags($this->nilaipenerimaan);
+  $this->userid = strip_tags($this->userid);
 
   // Bind data
   $stmt->bindParam(':nopenerimaan', $this->nopenerimaan);
@@ -72,7 +72,7 @@ class HeaderTerimaDistribusi {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nopenerimaan = htmlspecialchars(strip_tags($this->nopenerimaan));
+    $this->nopenerimaan = strip_tags($this->nopenerimaan);
     
     // Bind data
     $stmt->bindParam(':nopenerimaan', $this->nopenerimaan);
@@ -97,7 +97,7 @@ class HeaderTerimaDistribusi {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nopenerimaan = htmlspecialchars(strip_tags($this->nopenerimaan));
+    $this->nopenerimaan = strip_tags($this->nopenerimaan);
 
     // Bind data
     $stmt->bindParam(':nopenerimaan', $this->nopenerimaan);

@@ -27,11 +27,11 @@ class DetailFakturKembali {
   $stmt = $this->conn->prepare($query);
   
   // Clean data
-  $this->nokembali = htmlspecialchars(strip_tags($this->nokembali));
-  $this->nopenjualan = htmlspecialchars(strip_tags($this->nopenjualan));
-  $this->tanggalsp = htmlspecialchars(strip_tags($this->tanggalsp));
-  $this->sp = htmlspecialchars(strip_tags($this->sp));
-  $this->nourut = htmlspecialchars(strip_tags($this->nourut));
+  $this->nokembali = strip_tags($this->nokembali);
+  $this->nopenjualan = strip_tags($this->nopenjualan);
+  $this->tanggalsp = strip_tags($this->tanggalsp);
+  $this->sp = strip_tags($this->sp);
+  $this->nourut = strip_tags($this->nourut);
 
   // Bind data
   $stmt->bindParam(':nokembali', $this->nokembali);
@@ -60,7 +60,7 @@ class DetailFakturKembali {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nokembali = htmlspecialchars(strip_tags($this->nokembali));
+    $this->nokembali = strip_tags($this->nokembali);
     
     // Bind data
     $stmt->bindParam(':nokembali', $this->nokembali);
@@ -85,7 +85,7 @@ class DetailFakturKembali {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nokembali = htmlspecialchars(strip_tags($this->nokembali));
+    $this->nokembali = strip_tags($this->nokembali);
 
     // Bind data
     $stmt->bindParam(':nokembali', $this->nokembali);

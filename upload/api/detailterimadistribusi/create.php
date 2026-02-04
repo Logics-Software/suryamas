@@ -23,14 +23,14 @@
       $nopenerimaan = '';
       foreach ($data as $item) {
           if ($nopenerimaan  !== $item->nopenerimaan) {
-            $detailterimadistribusi->nopenerimaan = $item->nopenerimaan;
+            $detailterimadistribusi->nopenerimaan = isset($item->nopenerimaan) ? urldecode($item->nopenerimaan) : null;
             $detailterimadistribusi->delete();
 
-            $nopenerimaan = $item->nopenerimaan;
+            $nopenerimaan = isset($item->nopenerimaan) ? urldecode($item->nopenerimaan) : null;
           } 
       }
     } else {
-        $detailterimadistribusi->nopenerimaan = $data->nopenerimaan;
+        $detailterimadistribusi->nopenerimaan = isset($data->nopenerimaan) ? urldecode($data->nopenerimaan) : null;
         $detailterimadistribusi->delete();
     }
 
@@ -38,15 +38,15 @@
             $success = 0;
             $fail = 0;
             //insert data
-            $detailterimadistribusi->nopenerimaan = $data->nopenerimaan;
-            $detailterimadistribusi->kodebarang = $data->kodebarang;
-            $detailterimadistribusi->nopembelian = $data->nopembelian;
-            $detailterimadistribusi->nomorbatch = $data->nomorbatch;
-            $detailterimadistribusi->expireddate = $data->expireddate;
-            $detailterimadistribusi->jumlah = $data->jumlah;
-            $detailterimadistribusi->hpp = $data->hpp;
-            $detailterimadistribusi->totalharga = $data->totalharga;
-            $detailterimadistribusi->nourut = $data->nourut;
+            $detailterimadistribusi->nopenerimaan = isset($data->nopenerimaan) ? urldecode($data->nopenerimaan) : null;
+            $detailterimadistribusi->kodebarang = isset($data->kodebarang) ? urldecode($data->kodebarang) : null;
+            $detailterimadistribusi->nopembelian = isset($data->nopembelian) ? urldecode($data->nopembelian) : null;
+            $detailterimadistribusi->nomorbatch = isset($data->nomorbatch) ? urldecode($data->nomorbatch) : null;
+            $detailterimadistribusi->expireddate = isset($data->expireddate) ? urldecode($data->expireddate) : null;
+            $detailterimadistribusi->jumlah = isset($data->jumlah) ? urldecode($data->jumlah) : null;
+            $detailterimadistribusi->hpp = isset($data->hpp) ? urldecode($data->hpp) : null;
+            $detailterimadistribusi->totalharga = isset($data->totalharga) ? urldecode($data->totalharga) : null;
+            $detailterimadistribusi->nourut = isset($data->nourut) ? urldecode($data->nourut) : null;
             if ($detailterimadistribusi->create()) {
                 $success++;
             } else {
@@ -57,15 +57,15 @@
         $fail = 0;
         foreach ($data as $item) {
             //insert data
-            $detailterimadistribusi->nopenerimaan = $item->nopenerimaan;
-            $detailterimadistribusi->kodebarang = $item->kodebarang;
-            $detailterimadistribusi->nopembelian = $item->nopembelian;
-            $detailterimadistribusi->nomorbatch = $item->nomorbatch;
-            $detailterimadistribusi->expireddate = $item->expireddate;
-            $detailterimadistribusi->jumlah = $item->jumlah;
-            $detailterimadistribusi->hpp = $item->hpp;
-            $detailterimadistribusi->totalharga = $item->totalharga;
-            $detailterimadistribusi->nourut = $item->nourut;
+            $detailterimadistribusi->nopenerimaan = isset($item->nopenerimaan) ? urldecode($item->nopenerimaan) : null;
+            $detailterimadistribusi->kodebarang = isset($item->kodebarang) ? urldecode($item->kodebarang) : null;
+            $detailterimadistribusi->nopembelian = isset($item->nopembelian) ? urldecode($item->nopembelian) : null;
+            $detailterimadistribusi->nomorbatch = isset($item->nomorbatch) ? urldecode($item->nomorbatch) : null;
+            $detailterimadistribusi->expireddate = isset($item->expireddate) ? urldecode($item->expireddate) : null;
+            $detailterimadistribusi->jumlah = isset($item->jumlah) ? urldecode($item->jumlah) : null;
+            $detailterimadistribusi->hpp = isset($item->hpp) ? urldecode($item->hpp) : null;
+            $detailterimadistribusi->totalharga = isset($item->totalharga) ? urldecode($item->totalharga) : null;
+            $detailterimadistribusi->nourut = isset($item->nourut) ? urldecode($item->nourut) : null;
             if ($detailterimadistribusi->create()) {
                 $success++;
             } else {

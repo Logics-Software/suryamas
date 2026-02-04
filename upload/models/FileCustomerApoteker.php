@@ -32,15 +32,15 @@
   $stmt = $this->conn->prepare($query);
 
   // Clean data
-  $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
-  $this->namaapoteker = htmlspecialchars(strip_tags($this->namaapoteker));
-  $this->alamatapoteker = htmlspecialchars(strip_tags($this->alamatapoteker));
-  $this->noijin = htmlspecialchars(strip_tags($this->noijin));
-  $this->tanggaled = htmlspecialchars(strip_tags($this->tanggaled));
-  $this->noijinusaha = htmlspecialchars(strip_tags($this->noijinusaha));
-  $this->tgledijinusaha = htmlspecialchars(strip_tags($this->tgledijinusaha));
-  $this->nocdob = htmlspecialchars(strip_tags($this->nocdob));
-  $this->tanggalcdob = htmlspecialchars(strip_tags($this->tanggalcdob));
+  $this->kodecustomer = strip_tags($this->kodecustomer);
+  $this->namaapoteker = strip_tags($this->namaapoteker);
+  $this->alamatapoteker = strip_tags($this->alamatapoteker);
+  $this->noijin = strip_tags($this->noijin);
+  $this->tanggaled = strip_tags($this->tanggaled);
+  $this->noijinusaha = strip_tags($this->noijinusaha);
+  $this->tgledijinusaha = strip_tags($this->tgledijinusaha);
+  $this->nocdob = strip_tags($this->nocdob);
+  $this->tanggalcdob = strip_tags($this->tanggalcdob);
 
   // Bind data
   $stmt->bindParam(':kodecustomer', $this->kodecustomer);
@@ -73,7 +73,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
+    $this->kodecustomer = strip_tags($this->kodecustomer);
     
     // Bind data
     $stmt->bindParam(':kodecustomer', $this->kodecustomer);
@@ -98,7 +98,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
+    $this->kodecustomer = strip_tags($this->kodecustomer);
     
     // Bind data
     $stmt->bindParam(':kodecustomer', $this->kodecustomer);

@@ -23,14 +23,14 @@
       $nopenjualan = '';
       foreach ($data as $item) {
           if ($nopenjualan  !== $item->nopenjualan) {
-            $detailpenjualan->nopenjualan = $item->nopenjualan;
+            $detailpenjualan->nopenjualan = isset($item->nopenjualan) ? urldecode($item->nopenjualan) : null;
             $detailpenjualan->delete();
 
-            $nopenjualan = $item->nopenjualan;
+            $nopenjualan = isset($item->nopenjualan) ? urldecode($item->nopenjualan) : null;
           } 
       }
     } else {
-        $detailpenjualan->nopenjualan = $data->nopenjualan;
+        $detailpenjualan->nopenjualan = isset($data->nopenjualan) ? urldecode($data->nopenjualan) : null;
         $detailpenjualan->delete();
     }
 
@@ -38,18 +38,18 @@
             $success = 0;
             $fail = 0;
             //insert data
-            $detailpenjualan->nopenjualan = $data->nopenjualan;
-            $detailpenjualan->kodebarang = $data->kodebarang;
-            $detailpenjualan->nopembelian = $data->nopembelian;
-            $detailpenjualan->nomorbatch = $data->nomorbatch;
-            $detailpenjualan->expireddate = $data->expireddate;
-            $detailpenjualan->jumlah = $data->jumlah;
-            $detailpenjualan->hargajual = $data->hargajual;
-            $detailpenjualan->discount1= $data->discount1;
-            $detailpenjualan->discount2= $data->discount2;
-            $detailpenjualan->cn= $data->cn;
-            $detailpenjualan->totalharga = $data->totalharga;
-            $detailpenjualan->nourut = $data->nourut;
+            $detailpenjualan->nopenjualan = isset($data->nopenjualan) ? urldecode($data->nopenjualan) : null;
+            $detailpenjualan->kodebarang = isset($data->kodebarang) ? urldecode($data->kodebarang) : null;
+            $detailpenjualan->nopembelian = isset($data->nopembelian) ? urldecode($data->nopembelian) : null;
+            $detailpenjualan->nomorbatch = isset($data->nomorbatch) ? urldecode($data->nomorbatch) : null;
+            $detailpenjualan->expireddate = isset($data->expireddate) ? urldecode($data->expireddate) : null;
+            $detailpenjualan->jumlah = isset($data->jumlah) ? urldecode($data->jumlah) : null;
+            $detailpenjualan->hargajual = isset($data->hargajual) ? urldecode($data->hargajual) : null;
+            $detailpenjualan->discount1= isset($data->discount1) ? urldecode($data->discount1) : null;
+            $detailpenjualan->discount2= isset($data->discount2) ? urldecode($data->discount2) : null;
+            $detailpenjualan->cn= isset($data->cn) ? urldecode($data->cn) : null;
+            $detailpenjualan->totalharga = isset($data->totalharga) ? urldecode($data->totalharga) : null;
+            $detailpenjualan->nourut = isset($data->nourut) ? urldecode($data->nourut) : null;
             if ($detailpenjualan->create()) {
                 $success++;
             } else {
@@ -60,18 +60,18 @@
         $fail = 0;
         foreach ($data as $item) {
             //insert data
-            $detailpenjualan->nopenjualan = $item->nopenjualan;
-            $detailpenjualan->kodebarang = $item->kodebarang;
-            $detailpenjualan->nopembelian = $item->nopembelian;
-            $detailpenjualan->nomorbatch = $item->nomorbatch;
-            $detailpenjualan->expireddate = $item->expireddate;
-            $detailpenjualan->jumlah = $item->jumlah;
-            $detailpenjualan->hargajual = $item->hargajual;
-            $detailpenjualan->discount1= $item->discount1;
-            $detailpenjualan->discount2= $item->discount2;
-            $detailpenjualan->cn= $item->cn;
-            $detailpenjualan->totalharga = $item->totalharga;
-            $detailpenjualan->nourut = $item->nourut;
+            $detailpenjualan->nopenjualan = isset($item->nopenjualan) ? urldecode($item->nopenjualan) : null;
+            $detailpenjualan->kodebarang = isset($item->kodebarang) ? urldecode($item->kodebarang) : null;
+            $detailpenjualan->nopembelian = isset($item->nopembelian) ? urldecode($item->nopembelian) : null;
+            $detailpenjualan->nomorbatch = isset($item->nomorbatch) ? urldecode($item->nomorbatch) : null;
+            $detailpenjualan->expireddate = isset($item->expireddate) ? urldecode($item->expireddate) : null;
+            $detailpenjualan->jumlah = isset($item->jumlah) ? urldecode($item->jumlah) : null;
+            $detailpenjualan->hargajual = isset($item->hargajual) ? urldecode($item->hargajual) : null;
+            $detailpenjualan->discount1= isset($item->discount1) ? urldecode($item->discount1) : null;
+            $detailpenjualan->discount2= isset($item->discount2) ? urldecode($item->discount2) : null;
+            $detailpenjualan->cn= isset($item->cn) ? urldecode($item->cn) : null;
+            $detailpenjualan->totalharga = isset($item->totalharga) ? urldecode($item->totalharga) : null;
+            $detailpenjualan->nourut = isset($item->nourut) ? urldecode($item->nourut) : null;
             if ($detailpenjualan->create()) {
                 $success++;
             } else {

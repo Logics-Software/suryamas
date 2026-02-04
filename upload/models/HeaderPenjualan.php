@@ -42,22 +42,22 @@ class HeaderPenjualan {
   $stmt = $this->conn->prepare($query);
 
   // Clean data
-  $this->kodeformulir = htmlspecialchars(strip_tags($this->kodeformulir));
-  $this->nopenjualan = htmlspecialchars(strip_tags($this->nopenjualan));
-  $this->tanggalpenjualan = htmlspecialchars(strip_tags($this->tanggalpenjualan));
-  $this->kodetermin = htmlspecialchars(strip_tags($this->kodetermin));
-  $this->tanggaljatuhtempo = htmlspecialchars(strip_tags($this->tanggaljatuhtempo));
-  $this->nopo = htmlspecialchars(strip_tags($this->nopo));
-  $this->kodecustomer = htmlspecialchars(strip_tags($this->kodecustomer));
-  $this->kodesalesman = htmlspecialchars(strip_tags($this->kodesalesman));
-  $this->kodepengirim = htmlspecialchars(strip_tags($this->kodepengirim));
-  $this->dpp = htmlspecialchars(strip_tags($this->dpp));
-  $this->ppn = htmlspecialchars(strip_tags($this->ppn));
-  $this->nilaipenjualan = htmlspecialchars(strip_tags($this->nilaipenjualan));
-  $this->saldopenjualan = htmlspecialchars(strip_tags($this->saldopenjualan));
-  $this->cnpenjualan = htmlspecialchars(strip_tags($this->cnpenjualan));
-  $this->userid = htmlspecialchars(strip_tags($this->userid));
-  $this->status = htmlspecialchars(strip_tags($this->status));
+  $this->kodeformulir = strip_tags($this->kodeformulir);
+  $this->nopenjualan = strip_tags($this->nopenjualan);
+  $this->tanggalpenjualan = strip_tags($this->tanggalpenjualan);
+  $this->kodetermin = strip_tags($this->kodetermin);
+  $this->tanggaljatuhtempo = strip_tags($this->tanggaljatuhtempo);
+  $this->nopo = strip_tags($this->nopo);
+  $this->kodecustomer = strip_tags($this->kodecustomer);
+  $this->kodesalesman = strip_tags($this->kodesalesman);
+  $this->kodepengirim = strip_tags($this->kodepengirim);
+  $this->dpp = strip_tags($this->dpp);
+  $this->ppn = strip_tags($this->ppn);
+  $this->nilaipenjualan = strip_tags($this->nilaipenjualan);
+  $this->saldopenjualan = strip_tags($this->saldopenjualan);
+  $this->cnpenjualan = strip_tags($this->cnpenjualan);
+  $this->userid = strip_tags($this->userid);
+  $this->status = strip_tags($this->status);
 
   // Bind data
   $stmt->bindParam(':kodeformulir', $this->kodeformulir);
@@ -98,7 +98,7 @@ class HeaderPenjualan {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nopenjualan = htmlspecialchars(strip_tags($this->nopenjualan));
+    $this->nopenjualan = strip_tags($this->nopenjualan);
     
     // Bind data
     $stmt->bindParam(':nopenjualan', $this->nopenjualan);
@@ -123,7 +123,7 @@ class HeaderPenjualan {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nopenjualan = htmlspecialchars(strip_tags($this->nopenjualan));
+    $this->nopenjualan = strip_tags($this->nopenjualan);
     
     // Bind data
     $stmt->bindParam(':nopenjualan', $this->nopenjualan);

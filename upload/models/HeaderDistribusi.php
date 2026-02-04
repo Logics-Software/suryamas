@@ -32,14 +32,14 @@ class HeaderDistribusi {
   $stmt = $this->conn->prepare($query);
 
   // Clean data
-  $this->nodistribusi = htmlspecialchars(strip_tags($this->nodistribusi));
-  $this->tanggaldistribusi = htmlspecialchars(strip_tags($this->tanggaldistribusi));
-  $this->keterangan = htmlspecialchars(strip_tags($this->keterangan));
-  $this->kodegudang = htmlspecialchars(strip_tags($this->kodegudang));
-  $this->kodeterima = htmlspecialchars(strip_tags($this->kodeterima));
-  $this->nilaidistribusi = htmlspecialchars(strip_tags($this->nilaidistribusi));
-  $this->userid = htmlspecialchars(strip_tags($this->userid));
-  $this->status = htmlspecialchars(strip_tags($this->status));
+  $this->nodistribusi = strip_tags($this->nodistribusi);
+  $this->tanggaldistribusi = strip_tags($this->tanggaldistribusi);
+  $this->keterangan = strip_tags($this->keterangan);
+  $this->kodegudang = strip_tags($this->kodegudang);
+  $this->kodeterima = strip_tags($this->kodeterima);
+  $this->nilaidistribusi = strip_tags($this->nilaidistribusi);
+  $this->userid = strip_tags($this->userid);
+  $this->status = strip_tags($this->status);
 
   // Bind data
   $stmt->bindParam(':nodistribusi', $this->nodistribusi);
@@ -71,7 +71,7 @@ class HeaderDistribusi {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nodistribusi = htmlspecialchars(strip_tags($this->nodistribusi));
+    $this->nodistribusi = strip_tags($this->nodistribusi);
     
     // Bind data
     $stmt->bindParam(':nodistribusi', $this->nodistribusi);
@@ -96,7 +96,7 @@ class HeaderDistribusi {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nodistribusi = htmlspecialchars(strip_tags($this->nodistribusi));
+    $this->nodistribusi = strip_tags($this->nodistribusi);
     
     // Bind data
     $stmt->bindParam(':nodistribusi', $this->nodistribusi);
@@ -118,7 +118,7 @@ class HeaderDistribusi {
     $query .= " WHERE status = 0 AND kodegudang = :kodeterima ORDER BY nodistribusi";
 
     $stmt = $this->conn->prepare($query);
-    // $this->nopenjualan = htmlspecialchars(strip_tags($this->nopenjualan));
+    // $this->nopenjualan = strip_tags($this->nopenjualan));
     $stmt->bindParam(':kodeterima', $kodeterima);
     $stmt->execute();
 

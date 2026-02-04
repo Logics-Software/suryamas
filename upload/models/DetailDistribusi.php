@@ -32,15 +32,15 @@ class DetailDistribusi {
   $stmt = $this->conn->prepare($query);
   
   // Clean data
-  $this->nodistribusi = htmlspecialchars(strip_tags($this->nodistribusi));
-  $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
-  $this->nopembelian = htmlspecialchars(strip_tags($this->nopembelian));
-  $this->nomorbatch = htmlspecialchars(strip_tags($this->nomorbatch));
-  $this->expireddate = htmlspecialchars(strip_tags($this->expireddate));
-  $this->jumlah = htmlspecialchars(strip_tags($this->jumlah));
-  $this->hpp = htmlspecialchars(strip_tags($this->hpp));
-  $this->totalharga = htmlspecialchars(strip_tags($this->totalharga));
-  $this->nourut = htmlspecialchars(strip_tags($this->nourut));
+  $this->nodistribusi = strip_tags($this->nodistribusi);
+  $this->kodebarang = strip_tags($this->kodebarang);
+  $this->nopembelian = strip_tags($this->nopembelian);
+  $this->nomorbatch = strip_tags($this->nomorbatch);
+  $this->expireddate = strip_tags($this->expireddate);
+  $this->jumlah = strip_tags($this->jumlah);
+  $this->hpp = strip_tags($this->hpp);
+  $this->totalharga = strip_tags($this->totalharga);
+  $this->nourut = strip_tags($this->nourut);
 
   // Bind data
   $stmt->bindParam(':nodistribusi', $this->nodistribusi);
@@ -73,7 +73,7 @@ class DetailDistribusi {
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->nodistribusi = htmlspecialchars(strip_tags($this->nodistribusi));
+    $this->nodistribusi = strip_tags($this->nodistribusi);
     
     // Bind data
     $stmt->bindParam(':nodistribusi', $this->nodistribusi);
@@ -95,7 +95,7 @@ class DetailDistribusi {
     $query .= " WHERE nodistribusi = :nodistribusi ORDER BY nourut ASC";
 
     $stmt = $this->conn->prepare($query);
-    // $this->nodistribusi = htmlspecialchars(strip_tags($this->nodistribusi));
+    // $this->nodistribusi = strip_tags($this->nodistribusi));
     $stmt->bindParam(':nodistribusi', $nodistribusi);
     $stmt->execute();
 

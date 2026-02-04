@@ -22,18 +22,18 @@
     $fail = 0;
     if (!is_array($data)) {
         //delete data
-        $headerfakturkembali->nokembali = $data->nokembali;
+        $headerfakturkembali->nokembali = isset($data->nokembali) ? urldecode($data->nokembali) : null;
         $headerfakturkembali->delete();
 
         //insert data
-        $headerfakturkembali->kodeformulir = $data->kodeformulir;
-        $headerfakturkembali->nokembali = $data->nokembali;
-        $headerfakturkembali->tanggalkembali = $data->tanggalkembali;
-        $headerfakturkembali->kodepengirim = $data->kodepengirim;
-        $headerfakturkembali->jumlahfaktur = $data->jumlahfaktur;
-        $headerfakturkembali->jumlahitem= $data->jumlahitem;
-        $headerfakturkembali->status = $data->status;
-        $headerfakturkembali->userid = $data->userid;
+        $headerfakturkembali->kodeformulir = isset($data->kodeformulir) ? urldecode($data->kodeformulir) : null;
+        $headerfakturkembali->nokembali = isset($data->nokembali) ? urldecode($data->nokembali) : null;
+        $headerfakturkembali->tanggalkembali = isset($data->tanggalkembali) ? urldecode($data->tanggalkembali) : null;
+        $headerfakturkembali->kodepengirim = isset($data->kodepengirim) ? urldecode($data->kodepengirim) : null;
+        $headerfakturkembali->jumlahfaktur = isset($data->jumlahfaktur) ? urldecode($data->jumlahfaktur) : null;
+        $headerfakturkembali->jumlahitem= isset($data->jumlahitem) ? urldecode($data->jumlahitem) : null;
+        $headerfakturkembali->status = isset($data->status) ? urldecode($data->status) : null;
+        $headerfakturkembali->userid = isset($data->userid) ? urldecode($data->userid) : null;
         if ($headerfakturkembali->create()) {
             $success++;
         } else {
@@ -42,18 +42,18 @@
     } else {
         foreach ($data as $item) {
             //delete data
-            $headerfakturkembali->nokembali = $item->nokembali;
+            $headerfakturkembali->nokembali = isset($item->nokembali) ? urldecode($item->nokembali) : null;
             $headerfakturkembali->delete();
 
             //insert data
-            $headerfakturkembali->kodeformulir = $item->kodeformulir;
-            $headerfakturkembali->nokembali = $item->nokembali;
-            $headerfakturkembali->tanggalkembali = $item->tanggalkembali;
-            $headerfakturkembali->kodepengirim = $item->kodepengirim;
-            $headerfakturkembali->jumlahfaktur = $item->jumlahfaktur;
-            $headerfakturkembali->jumlahitem= $item->jumlahitem;
-            $headerfakturkembali->status = $item->status;
-            $headerfakturkembali->userid = $item->userid;
+            $headerfakturkembali->kodeformulir = isset($item->kodeformulir) ? urldecode($item->kodeformulir) : null;
+            $headerfakturkembali->nokembali = isset($item->nokembali) ? urldecode($item->nokembali) : null;
+            $headerfakturkembali->tanggalkembali = isset($item->tanggalkembali) ? urldecode($item->tanggalkembali) : null;
+            $headerfakturkembali->kodepengirim = isset($item->kodepengirim) ? urldecode($item->kodepengirim) : null;
+            $headerfakturkembali->jumlahfaktur = isset($item->jumlahfaktur) ? urldecode($item->jumlahfaktur) : null;
+            $headerfakturkembali->jumlahitem= isset($item->jumlahitem) ? urldecode($item->jumlahitem) : null;
+            $headerfakturkembali->status = isset($item->status) ? urldecode($item->status) : null;
+            $headerfakturkembali->userid = isset($item->userid) ? urldecode($item->userid) : null;
             if ($headerfakturkembali->create()) {
                 $success++;
             } else {

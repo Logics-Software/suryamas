@@ -27,12 +27,14 @@
   // Prepare Statement
   $stmt = $this->conn->prepare($query);
 
-  // Clean data
-  $this->kodepabrik = htmlspecialchars(strip_tags($this->kodepabrik));
-  $this->namapabrik = htmlspecialchars(strip_tags($this->namapabrik));
-  $this->inisialkodebarang = htmlspecialchars(strip_tags($this->inisialkodebarang));
-  $this->status = htmlspecialchars(strip_tags($this->status));
-  $this->kodeif = htmlspecialchars(strip_tags($this->kodeif));
+  // Clean data - hanya strip tags untuk keamanan, tanpa htmlspecialchars
+  // htmlspecialchars tidak diperlukan karena data disimpan ke database, bukan untuk output HTML
+  // PDO prepared statement sudah aman dari SQL injection
+  $this->kodepabrik = strip_tags($this->kodepabrik);
+  $this->namapabrik = strip_tags($this->namapabrik);
+  $this->inisialkodebarang = strip_tags($this->inisialkodebarang);
+  $this->status = strip_tags($this->status);
+  $this->kodeif = strip_tags($this->kodeif);
 
   // Bind data
   $stmt->bindParam(':kodepabrik', $this->kodepabrik);
@@ -61,7 +63,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodepabrik = htmlspecialchars(strip_tags($this->kodepabrik));
+    $this->kodepabrik = strip_tags($this->kodepabrik);
     
     // Bind data
     $stmt->bindParam(':kodepabrik', $this->kodepabrik);
@@ -86,7 +88,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodepabrik = htmlspecialchars(strip_tags($this->kodepabrik));
+    $this->kodepabrik = strip_tags($this->kodepabrik);
     
     // Bind data
     $stmt->bindParam(':kodepabrik', $this->kodepabrik);

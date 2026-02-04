@@ -23,14 +23,14 @@
       $nodistribusi = '';
       foreach ($data as $item) {
           if ($nodistribusi  !== $item->nodistribusi) {
-            $detaildistribusi->nodistribusi = $item->nodistribusi;
+            $detaildistribusi->nodistribusi = isset($item->nodistribusi) ? urldecode($item->nodistribusi) : null;
             $detaildistribusi->delete();
 
-            $nodistribusi = $item->nodistribusi;
+            $nodistribusi = isset($item->nodistribusi) ? urldecode($item->nodistribusi) : null;
           } 
       }
     } else {
-        $detaildistribusi->nodistribusi = $data->nodistribusi;
+        $detaildistribusi->nodistribusi = isset($data->nodistribusi) ? urldecode($data->nodistribusi) : null;
         $detaildistribusi->delete();
     }
 
@@ -38,15 +38,15 @@
             $success = 0;
             $fail = 0;
             //insert data
-            $detaildistribusi->nodistribusi = $data->nodistribusi;
-            $detaildistribusi->kodebarang = $data->kodebarang;
-            $detaildistribusi->nopembelian = $data->nopembelian;
-            $detaildistribusi->nomorbatch = $data->nomorbatch;
-            $detaildistribusi->expireddate = $data->expireddate;
-            $detaildistribusi->jumlah = $data->jumlah;
-            $detaildistribusi->hpp = $data->hpp;
-            $detaildistribusi->totalharga = $data->totalharga;
-            $detaildistribusi->nourut = $data->nourut;
+            $detaildistribusi->nodistribusi = isset($data->nodistribusi) ? urldecode($data->nodistribusi) : null;
+            $detaildistribusi->kodebarang = isset($data->kodebarang) ? urldecode($data->kodebarang) : null;
+            $detaildistribusi->nopembelian = isset($data->nopembelian) ? urldecode($data->nopembelian) : null;
+            $detaildistribusi->nomorbatch = isset($data->nomorbatch) ? urldecode($data->nomorbatch) : null;
+            $detaildistribusi->expireddate = isset($data->expireddate) ? urldecode($data->expireddate) : null;
+            $detaildistribusi->jumlah = isset($data->jumlah) ? urldecode($data->jumlah) : null;
+            $detaildistribusi->hpp = isset($data->hpp) ? urldecode($data->hpp) : null;
+            $detaildistribusi->totalharga = isset($data->totalharga) ? urldecode($data->totalharga) : null;
+            $detaildistribusi->nourut = isset($data->nourut) ? urldecode($data->nourut) : null;
             if ($detaildistribusi->create()) {
                 $success++;
             } else {
@@ -57,15 +57,15 @@
         $fail = 0;
         foreach ($data as $item) {
             //insert data
-            $detaildistribusi->nodistribusi = $item->nodistribusi;
-            $detaildistribusi->kodebarang = $item->kodebarang;
-            $detaildistribusi->nopembelian = $item->nopembelian;
-            $detaildistribusi->nomorbatch = $item->nomorbatch;
-            $detaildistribusi->expireddate = $item->expireddate;
-            $detaildistribusi->jumlah = $item->jumlah;
-            $detaildistribusi->hpp = $item->hpp;
-            $detaildistribusi->totalharga = $item->totalharga;
-            $detaildistribusi->nourut = $item->nourut;
+            $detaildistribusi->nodistribusi = isset($item->nodistribusi) ? urldecode($item->nodistribusi) : null;
+            $detaildistribusi->kodebarang = isset($item->kodebarang) ? urldecode($item->kodebarang) : null;
+            $detaildistribusi->nopembelian = isset($item->nopembelian) ? urldecode($item->nopembelian) : null;
+            $detaildistribusi->nomorbatch = isset($item->nomorbatch) ? urldecode($item->nomorbatch) : null;
+            $detaildistribusi->expireddate = isset($item->expireddate) ? urldecode($item->expireddate) : null;
+            $detaildistribusi->jumlah = isset($item->jumlah) ? urldecode($item->jumlah) : null;
+            $detaildistribusi->hpp = isset($item->hpp) ? urldecode($item->hpp) : null;
+            $detaildistribusi->totalharga = isset($item->totalharga) ? urldecode($item->totalharga) : null;
+            $detaildistribusi->nourut = isset($item->nourut) ? urldecode($item->nourut) : null;
             if ($detaildistribusi->create()) {
                 $success++;
             } else {

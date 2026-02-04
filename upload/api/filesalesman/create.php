@@ -23,17 +23,17 @@
 
   if (!is_array($data)) {
       //delete data
-      $filesalesman->kodesalesman = $data->kodesalesman;
+      $filesalesman->kodesalesman = isset($data->kodesalesman) ? urldecode($data->kodesalesman) : null;
       $filesalesman->delete();
 
       //insert data
-      $filesalesman->kodesalesman = $data->kodesalesman;
-      $filesalesman->namasalesman = $data->namasalesman;
-      $filesalesman->alamatsalesman = $data->alamatsalesman;
-      $filesalesman->notelepon = $data->notelepon;
-      $filesalesman->kodearea = $data->kodearea;
-      $filesalesman->userid = $data->userid;
-      $filesalesman->status = $data->status;
+      $filesalesman->kodesalesman = isset($data->kodesalesman) ? urldecode($data->kodesalesman) : null;
+      $filesalesman->namasalesman = isset($data->namasalesman) ? urldecode($data->namasalesman) : null;
+      $filesalesman->alamatsalesman = isset($data->alamatsalesman) ? urldecode($data->alamatsalesman) : null;
+      $filesalesman->notelepon = isset($data->notelepon) ? urldecode($data->notelepon) : null;
+      $filesalesman->kodearea = isset($data->kodearea) ? urldecode($data->kodearea) : null;
+      $filesalesman->userid = isset($data->userid) ? urldecode($data->userid) : null;
+      $filesalesman->status = isset($data->status) ? urldecode($data->status) : null;
       if ($filesalesman->create()) {
           $success++;
       } else {
@@ -48,17 +48,17 @@
   } else {
     foreach ($data as $item) {
         //delete data
-        $filesalesman->kodesalesman = $item->kodesalesman;
+        $filesalesman->kodesalesman = isset($item->kodesalesman) ? urldecode($item->kodesalesman) : null;
         $filesalesman->delete();
 
         //insert data
-        $filesalesman->kodesalesman = $item->kodesalesman;
-        $filesalesman->namasalesman = $item->namasalesman;
-        $filesalesman->alamatsalesman = $item->alamatsalesman;
-        $filesalesman->notelepon = $item->notelepon;
-        $filesalesman->kodearea = $item->kodearea;
-        $filesalesman->userid = $item->userid;
-        $filesalesman->status = $item->status;
+        $filesalesman->kodesalesman = isset($item->kodesalesman) ? urldecode($item->kodesalesman) : null;
+        $filesalesman->namasalesman = isset($item->namasalesman) ? urldecode($item->namasalesman) : null;
+        $filesalesman->alamatsalesman = isset($item->alamatsalesman) ? urldecode($item->alamatsalesman) : null;
+        $filesalesman->notelepon = isset($item->notelepon) ? urldecode($item->notelepon) : null;
+        $filesalesman->kodearea = isset($item->kodearea) ? urldecode($item->kodearea) : null;
+        $filesalesman->userid = isset($item->userid) ? urldecode($item->userid) : null;
+        $filesalesman->status = isset($item->status) ? urldecode($item->status) : null;
         if ($filesalesman->create()) {
             $success++;
         } else {

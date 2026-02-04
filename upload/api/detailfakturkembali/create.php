@@ -23,14 +23,14 @@
       $nokembali = '';
       foreach ($data as $item) {
           if ($nokembali  !== $item->nokembali) {
-            $detailfakturkembali->nokembali = $item->nokembali;
+            $detailfakturkembali->nokembali = isset($item->nokembali) ? urldecode($item->nokembali) : null;
             $detailfakturkembali->delete();
 
-            $nokembali = $item->nokembali;
+            $nokembali = isset($item->nokembali) ? urldecode($item->nokembali) : null;
           } 
       }
     } else {
-        $detailfakturkembali->nokembali = $data->nokembali;
+        $detailfakturkembali->nokembali = isset($data->nokembali) ? urldecode($data->nokembali) : null;
         $detailfakturkembali->delete();
     }
 
@@ -38,11 +38,11 @@
             $success = 0;
             $fail = 0;
             //insert data
-            $detailfakturkembali->nokembali = $data->nokembali;
-            $detailfakturkembali->nopenjualan = $data->nopenjualan;
-            $detailfakturkembali->tanggalsp = $data->tanggalsp;
-            $detailfakturkembali->sp = $data->sp;
-            $detailfakturkembali->nourut = $data->nourut;
+            $detailfakturkembali->nokembali = isset($data->nokembali) ? urldecode($data->nokembali) : null;
+            $detailfakturkembali->nopenjualan = isset($data->nopenjualan) ? urldecode($data->nopenjualan) : null;
+            $detailfakturkembali->tanggalsp = isset($data->tanggalsp) ? urldecode($data->tanggalsp) : null;
+            $detailfakturkembali->sp = isset($data->sp) ? urldecode($data->sp) : null;
+            $detailfakturkembali->nourut = isset($data->nourut) ? urldecode($data->nourut) : null;
             if ($detailfakturkembali->create()) {
                 $success++;
             } else {
@@ -53,11 +53,11 @@
         $fail = 0;
         foreach ($data as $item) {
             //insert data
-            $detailfakturkembali->nokembali = $item->nokembali;
-            $detailfakturkembali->nopenjualan = $item->nopenjualan;
-            $detailfakturkembali->tanggalsp = $item->tanggalsp;
-            $detailfakturkembali->sp = $item->sp;
-            $detailfakturkembali->nourut = $item->nourut;
+            $detailfakturkembali->nokembali = isset($item->nokembali) ? urldecode($item->nokembali) : null;
+            $detailfakturkembali->nopenjualan = isset($item->nopenjualan) ? urldecode($item->nopenjualan) : null;
+            $detailfakturkembali->tanggalsp = isset($item->tanggalsp) ? urldecode($item->tanggalsp) : null;
+            $detailfakturkembali->sp = isset($item->sp) ? urldecode($item->sp) : null;
+            $detailfakturkembali->nourut = isset($item->nourut) ? urldecode($item->nourut) : null;
             if ($detailfakturkembali->create()) {
                 $success++;
             } else {

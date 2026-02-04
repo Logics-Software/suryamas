@@ -32,15 +32,15 @@
   $stmt = $this->conn->prepare($query);
 
   // Clean data
-  $this->kodegudang = htmlspecialchars(strip_tags($this->kodegudang));
-  $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
-  $this->nopembelian = htmlspecialchars(strip_tags($this->nopembelian));
-  $this->nomorbatch = htmlspecialchars(strip_tags($this->nomorbatch));
-  $this->tanggalperolehan = htmlspecialchars(strip_tags($this->tanggalperolehan));
-  $this->expireddate = htmlspecialchars(strip_tags($this->expireddate));
-  $this->hpp = htmlspecialchars(strip_tags($this->hpp));
-  $this->stokakhir = htmlspecialchars(strip_tags($this->stokakhir));
-  $this->status = htmlspecialchars(strip_tags($this->status));
+  $this->kodegudang = strip_tags($this->kodegudang);
+  $this->kodebarang = strip_tags($this->kodebarang);
+  $this->nopembelian = strip_tags($this->nopembelian);
+  $this->nomorbatch = strip_tags($this->nomorbatch);
+  $this->tanggalperolehan = strip_tags($this->tanggalperolehan);
+  $this->expireddate = strip_tags($this->expireddate);
+  $this->hpp = strip_tags($this->hpp);
+  $this->stokakhir = strip_tags($this->stokakhir);
+  $this->status = strip_tags($this->status);
 
   // Bind data
   $stmt->bindParam(':kodegudang', $this->kodegudang);
@@ -74,10 +74,10 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodegudang = htmlspecialchars(strip_tags($this->kodegudang));
-    $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
-    $this->nopembelian = htmlspecialchars(strip_tags($this->nopembelian));
-    $this->nomorbatch= htmlspecialchars(strip_tags($this->nomorbatch));
+    $this->kodegudang = strip_tags($this->kodegudang);
+    $this->kodebarang = strip_tags($this->kodebarang);
+    $this->nopembelian = strip_tags($this->nopembelian);
+    $this->nomorbatch= strip_tags($this->nomorbatch);
     
     // Bind data
     $stmt->bindParam(':kodegudang', $this->kodegudang);
@@ -99,13 +99,13 @@
   // Delete Category
   public function resetstok() {
     // Create query
-    $query = 'UPDATE FROM ' . $this->table  . ' SET StokAkhir = 0 WHERE kodebarang = :kodebarang';
+    $query = 'UPDATE ' . $this->table  . ' SET StokAkhir = 0 WHERE kodebarang = :kodebarang';
 
     // Prepare Statement
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
+    $this->kodebarang = strip_tags($this->kodebarang);
     
     // Bind data
     $stmt->bindParam(':kodebarang', $this->kodebarang);
@@ -130,10 +130,10 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodegudang = htmlspecialchars(strip_tags($this->kodegudang));
-    $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
-    $this->nopembelian = htmlspecialchars(strip_tags($this->nopembelian));
-    $this->nomorbatch = htmlspecialchars(strip_tags($this->nomorbatch));
+    $this->kodegudang = strip_tags($this->kodegudang);
+    $this->kodebarang = strip_tags($this->kodebarang);
+    $this->nopembelian = strip_tags($this->nopembelian);
+    $this->nomorbatch = strip_tags($this->nomorbatch);
     
     // Bind data
     $stmt->bindParam(':kodegudang', $this->kodegudang);

@@ -55,36 +55,38 @@
   // Prepare Statement
   $stmt = $this->conn->prepare($query);
 
-  // Clean data
-  $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
-  $this->namabarang = htmlspecialchars(strip_tags($this->namabarang));
-  $this->satuan = htmlspecialchars(strip_tags($this->satuan));
-  $this->kodepabrik = htmlspecialchars(strip_tags($this->kodepabrik));
-  $this->kodekemasan = htmlspecialchars(strip_tags($this->kodekemasan));
-  $this->kodegolongan = htmlspecialchars(strip_tags($this->kodegolongan));
-  $this->kodelokasi = htmlspecialchars(strip_tags($this->kodelokasi));
-  $this->kodekelasterapi = htmlspecialchars(strip_tags($this->kodekelasterapi));
-  $this->kodesupplier = htmlspecialchars(strip_tags($this->kodesupplier));
-  $this->farmalkes_id = htmlspecialchars(strip_tags($this->farmalkes_id));
-  $this->kodebko = htmlspecialchars(strip_tags($this->kodebko));
-  $this->barcode = htmlspecialchars(strip_tags($this->barcode));
-  $this->hpp = htmlspecialchars(strip_tags($this->hpp));
-  $this->hargar = htmlspecialchars(strip_tags($this->hargar));
-  $this->discr1 = htmlspecialchars(strip_tags($this->discr1));
-  $this->discr2 = htmlspecialchars(strip_tags($this->discr2));
-  $this->hargaw1 = htmlspecialchars(strip_tags($this->hargaw1));
-  $this->disc1w1 = htmlspecialchars(strip_tags($this->disc1w1));
-  $this->disc2w1 = htmlspecialchars(strip_tags($this->disc2w1));
-  $this->hargaw2 = htmlspecialchars(strip_tags($this->hargaw2));
-  $this->disc1w2 = htmlspecialchars(strip_tags($this->disc1w2));
-  $this->disc2w2 = htmlspecialchars(strip_tags($this->disc2w2));
-  $this->kondisir = htmlspecialchars(strip_tags($this->kondisir));
-  $this->kondisiw1 = htmlspecialchars(strip_tags($this->kondisiw1));
-  $this->kondisiw2 = htmlspecialchars(strip_tags($this->kondisiw2));
-  $this->jumlahr = htmlspecialchars(strip_tags($this->jumlahr));
-  $this->jumlahw1 = htmlspecialchars(strip_tags($this->jumlahw1));
-  $this->jumlahw2 = htmlspecialchars(strip_tags($this->jumlahw2));
-  $this->status = htmlspecialchars(strip_tags($this->status));
+  // Clean data - hanya strip tags untuk keamanan, tanpa htmlspecialchars
+  // htmlspecialchars tidak diperlukan karena data disimpan ke database, bukan untuk output HTML
+  // PDO prepared statement sudah aman dari SQL injection
+  $this->kodebarang = strip_tags($this->kodebarang);
+  $this->namabarang = strip_tags($this->namabarang);
+  $this->satuan = strip_tags($this->satuan);
+  $this->kodepabrik = strip_tags($this->kodepabrik);
+  $this->kodekemasan = strip_tags($this->kodekemasan);
+  $this->kodegolongan = strip_tags($this->kodegolongan);
+  $this->kodelokasi = strip_tags($this->kodelokasi);
+  $this->kodekelasterapi = strip_tags($this->kodekelasterapi);
+  $this->kodesupplier = strip_tags($this->kodesupplier);
+  $this->farmalkes_id = strip_tags($this->farmalkes_id);
+  $this->kodebko = strip_tags($this->kodebko);
+  $this->barcode = strip_tags($this->barcode);
+  $this->hpp = strip_tags($this->hpp);
+  $this->hargar = strip_tags($this->hargar);
+  $this->discr1 = strip_tags($this->discr1);
+  $this->discr2 = strip_tags($this->discr2);
+  $this->hargaw1 = strip_tags($this->hargaw1);
+  $this->disc1w1 = strip_tags($this->disc1w1);
+  $this->disc2w1 = strip_tags($this->disc2w1);
+  $this->hargaw2 = strip_tags($this->hargaw2);
+  $this->disc1w2 = strip_tags($this->disc1w2);
+  $this->disc2w2 = strip_tags($this->disc2w2);
+  $this->kondisir = strip_tags($this->kondisir);
+  $this->kondisiw1 = strip_tags($this->kondisiw1);
+  $this->kondisiw2 = strip_tags($this->kondisiw2);
+  $this->jumlahr = strip_tags($this->jumlahr);
+  $this->jumlahw1 = strip_tags($this->jumlahw1);
+  $this->jumlahw2 = strip_tags($this->jumlahw2);
+  $this->status = strip_tags($this->status);
 
   // Bind data
   $stmt->bindParam(':kodebarang', $this->kodebarang);
@@ -137,7 +139,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
+    $this->kodebarang = strip_tags($this->kodebarang);
     
     // Bind data
     $stmt->bindParam(':kodebarang', $this->kodebarang);
@@ -162,7 +164,7 @@
     $stmt = $this->conn->prepare($query);
 
     // Clean data
-    $this->kodebarang = htmlspecialchars(strip_tags($this->kodebarang));
+    $this->kodebarang = strip_tags($this->kodebarang);
     
     // Bind data
     $stmt->bindParam(':kodebarang', $this->kodebarang);
